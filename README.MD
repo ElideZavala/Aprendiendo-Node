@@ -1,5 +1,7 @@
 ## Aprendiendo Node
 
-Como funciona Node. 
+### Como funciona Node. 
 instalar nodemon `npm install -g nodemon`
-En wwidows debe ser desde el administrador. 
+
+**En windows debe ser desde el administrador** 
+
