@@ -2,11 +2,11 @@ const fs = require('fs');
 const colors = require('colors');
 
 const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
+     colors.enable();
 
      try {
           
-          let salida = ''; 
-          let consola = '';
+          let salida, consola = '';
           
           for( let i = 1; i <= maximo; i++ ){
                salida += `${numero} x ${i} = ${numero * i}\n`;

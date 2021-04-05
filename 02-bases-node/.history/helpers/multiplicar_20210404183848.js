@@ -2,13 +2,13 @@ const fs = require('fs');
 const colors = require('colors');
 
 const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
+     colors.enable();
 
      try {
           
-          let salida = ''; 
-          let consola = '';
+          let salida, consola = '';
           
-          for( let i = 1; i <= maximo; i++ ){
+          for(i=0; i<= maximo; i++){
                salida += `${numero} x ${i} = ${numero * i}\n`;
                consola += `${numero} ${'x'.yellow} ${i} ${'='.yellow} ${numero * i}\n`;
 
@@ -22,10 +22,11 @@ const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
                console.log(consola);
           }
           
-          fs.writeFileSync(`tabla-${numero}-hasta-el-${maximo}.txt`, salida );
+          fs.writeFileSync(`tabla-${numero}-hasta-el-${maximo}.txt`, consola );
           
-          return `tabla-${numero}-hasta-el-${maximo}.txt`.zebra;
-
+          const nombreArchivo = await `tabla-${numero}-hasta-el-${maximo}.txt`.zebra;
+          
+          return nombreArchivo;
      } catch (error) {
           throw error;
      }

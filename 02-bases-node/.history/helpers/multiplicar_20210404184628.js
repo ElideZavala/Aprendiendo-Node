@@ -5,8 +5,7 @@ const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
 
      try {
           
-          let salida = ''; 
-          let consola = '';
+          let salida, consola = '';
           
           for( let i = 1; i <= maximo; i++ ){
                salida += `${numero} x ${i} = ${numero * i}\n`;

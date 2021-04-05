@@ -4,6 +4,6 @@ require('colors')
 
 console.clear();
 
-crearArchivo( argv.n, argv.l, argv.m)
+crearArchivo( argv.n, argv.l)
      .then( nombreArchivo => console.log(nombreArchivo, 'creado'.zebra) )
      .catch( err => console.log(err));

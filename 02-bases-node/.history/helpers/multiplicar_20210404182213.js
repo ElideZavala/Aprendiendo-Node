@@ -2,16 +2,15 @@ const fs = require('fs');
 const colors = require('colors');
 
 const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
+     colors.enable();
 
      try {
           
-          let salida = ''; 
-          let consola = '';
+          let salida = '';
+          let hasta = maximo 
           
-          for( let i = 1; i <= maximo; i++ ){
-               salida += `${numero} x ${i} = ${numero * i}\n`;
-               consola += `${numero} ${'x'.yellow} ${i} ${'='.yellow} ${numero * i}\n`;
-
+          for(i=0; i<= hasta; i++){
+               salida += `${numero} ${'x'.yellow} ${i} ${'='.yellow} ${numero * i}\n`;
 
           }
 
@@ -19,13 +18,14 @@ const crearArchivo = async ( numero = 5, listar = false, maximo = 10) => {
                console.log('==================='.green);
                console.log('=== Tabla del'.green, colors.red( numero), '===');
                console.log('==================='.green);
-               console.log(consola);
+               console.log(salida);
           }
           
           fs.writeFileSync(`tabla-${numero}-hasta-el-${maximo}.txt`, salida );
           
-          return `tabla-${numero}-hasta-el-${maximo}.txt`.zebra;
-
+          const nombreArchivo = await `tabla-${numero}-hasta-el-${maximo}.txt`.zebra;
+          
+          return nombreArchivo;
      } catch (error) {
           throw error;
      }

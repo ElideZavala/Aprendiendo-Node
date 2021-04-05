@@ -1,0 +1,19 @@
+{
+  "name": "02-bases-node",
+  "version": "1.0.0",
+  "description": "Una simple aplicacion de tablas de multiplicar con textos",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElideZavala/Aprendiendo-Node.git"
+  },
+  "author": "Elide Zavala Vinagre",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElideZavala/Aprendiendo-Node/issues"
+  },
+  "homepage": "https://github.com/ElideZavala/Aprendiendo-Node#readme"
+}
